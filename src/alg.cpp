@@ -5,13 +5,14 @@ int search_leftmost(int* arr, int value, int left, int right) {
     return -1;
   }
 
+  if (arr[left] == value) return left;
+
   int cursor = (left + right) / 2;
 
-  if (arr[cursor] == value) return cursor;
   if (arr[cursor] < value) {
     return search_leftmost(arr, value, cursor + 1, right);
   }
-  return search_leftmost(arr, value, left, cursor);
+  return search_leftmost(arr, value, left, cursor - 1);
 }
 
 int cbinsearch(int* arr, int size, int value) {
