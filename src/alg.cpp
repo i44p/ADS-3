@@ -1,5 +1,4 @@
 // Copyright 2021 NNTU-CS
-#include <iostream>
 
 int search_leftmost(int* arr, int value, int left, int right) {
   if (left > right) {
