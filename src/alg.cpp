@@ -2,7 +2,7 @@
 
 int search_leftmost(int* arr, int value, int left, int right) {
   if (left > right) {
-    return -1;
+    return left;
   }
 
   if (arr[left] == value) return left;
